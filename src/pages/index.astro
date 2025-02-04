@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import AboutMe from "@/components/AboutMe.astro";
+import Badge from "../components/Badge.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Experience from "@/components/Experience.astro";
+import DownloadFile from "../components/icons/DownloadFile.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<Layout
+  title="Portafolio de Daniel Jaimes - Desarrollador y Programador Web con 15 años de experiencia"
+  description="Contrata a Daniel Jaimes para crear tu aplicación web o móvil. Desarrolladow Web y Creador de Contenido. Especializado en crear aplicaciones únicas"
+>
+  <main class="px-4">
+    <SectionContainer id="inicio" class="py-16 md:py-24">
+      
+      <div class="flex gap-4 mb-4">
+        <img
+          class="rounded-full shadow-lg w-16 h-16"
+          src="/img.webp"
+          alt="midudev photo"
+        />
+      </div>
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Daniel Jaimes <a
+          href="https://www.linkedin.com/in/daniel-jaimes-amancio-5587602a5/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center hover:scale-105 transition"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
+        <span class="text-yellow-200"> Desarrollador Backend especializado en Java</span>
+        .<span class="text-red-200"> De Lima, Perú</span>.
+        <span class="text-sky-200"
+          >Especializado en crear aplicaciones innovadoras.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/danieljaimesa/"
+        >
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill
+          href="./daniel-jaimes-CV.pdf"
+          download="Daniel_Jaimes_CV.pdf"
+          aria-label="Download Daniel Jaimes"
+        >
+          <DownloadFile class="size-4 md:size-6" />
+          Descargar CV
+        </SocialPill>
+        <SocialPill href="mailto:danieljaimesamancio@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          danieljaimesamancio@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experiencia">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <Briefcase class="size-8" />
+          Formación académica
+        </h2>
+        <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="proyectos">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <CodeIcon class="size-8" />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="sobreMi">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+          <ProfileCheck class="size-8" />
+          Sobre mi
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
