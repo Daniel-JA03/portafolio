@@ -16,73 +16,85 @@ import Bootstrap from "./icons/Bootstrap.astro";
 import LinkButton from "./LinkButton.astro";
 import Web from "./icons/web.astro";
 import VerMas from "./VerMas.astro";
+import Jwt from "./icons/Jwt.astro";
+import Postman from "./icons/Postman.astro"
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "bg-black text-white font-bold",
     icon: NextJS,
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-[#003159] text-white font-bold",
     icon: Tailwind,
   },
   REACT: {
     name: "React",
-    class: "bg-[#61dafb] text-black",
+    class: "bg-[#61dafb] text-black font-bold",
     icon: React,
   },
   SPRING: {
     name: "Spring Boot",
-    class: "bg-[#009900] text-white",
+    class: "bg-[#009900] text-white font-bold",
     icon: Spring,
   },
   JAVA: {
     name: "Java",
-    class: "bg-[#f89820] text-white",
+    class: "bg-[#f89820] text-white font-bold",
     icon: Java,
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-[#00758f] text-white",
+    class: "bg-[#00758f] text-white font-bold",
     icon: MySql,
   },
   SQLSERVER: {
     name: "SQL Server",
-    class: "bg-[#ff9933] text-white",
+    class: "bg-[#ff9933] text-white font-bold",
     icon: SqlServer,
   },
   CSHARP: {
     name: "C#",
-    class: "bg-[#aa00ff] text-white",
+    class: "bg-[#aa00ff] text-white font-bold",
     icon: CSHARP,
   },
   MONGODB: {
     name: "MongoDB",
-    class: "bg-[#4DB33D] text-white",
+    class: "bg-[#4DB33D] text-white font-bold",
     icon: MongoDB,
   },
   HTML: {
     name: "HTML",
-    class: "bg-[#f06529] text-white",
+    class: "bg-[#f06529] text-white font-bold",
     icon: Html,
   },
   CSS: {
     name: "CSS",
-    class: "bg-[#264de4] text-white",
+    class: "bg-[#264de4] text-white font-bold",
     icon: Css,
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-[#F0DB4F] text-black",
+    class: "bg-[#F0DB4F] text-black font-bold",
     icon: JavaScript,
   },
   BOOTSTRAP: {
     name: "Bootstrap",
-    class: "bg-[#aa00ff] text-white",
+    class: "bg-[#aa00ff] text-white font-bold",
     icon: Bootstrap,
   },
+  JWT: {
+    name: "JWT",
+    class: "bg-[#1e40af] text-white font-bold",
+    icon: Jwt
+  },
+  POSTMAN: {
+    name: "Postman",
+    class: "bg-[#ff6c37] text-white font-bold",
+    icon: Postman
+  }
 };
 const PROJECTS = [
   {
@@ -92,6 +104,14 @@ const PROJECTS = [
     github: "https://github.com/Daniel-JA03/PumaCafe",
     image: "/projects/pumaCafe.webp",
     tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "API RESTful de ventas de musgos - TheKingMoss",
+    description:
+      "API REST desarrollada con Spring Boot que permite gestionar un sistema de ventas de musgos. Cuenta con autenticación JWT, control de roles (ADMIN/USER) y endpoints protegidos. Conectada a una base de datos MySQL.",
+    github: "https://github.com/Daniel-JA03/thekingmoss",
+    image: "/projects/thekingmoss.webp", 
+    tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.JWT, TAGS.POSTMAN],
   },
   {
     title:
