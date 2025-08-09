@@ -1,6 +1,5 @@
 ---
 import GitHub from "./icons/GitHub.astro";
-import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import React from "./icons/React.astro";
 import Spring from "./icons/Spring.astro";
@@ -18,13 +17,10 @@ import Web from "./icons/web.astro";
 import VerMas from "./VerMas.astro";
 import Jwt from "./icons/Jwt.astro";
 import Postman from "./icons/Postman.astro"
+import TypeScript from "./icons/TypeScript.astro";
+import Angular from "./icons/Angular.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white font-bold",
-    icon: NextJS,
-  },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white font-bold",
@@ -37,7 +33,7 @@ const TAGS = {
   },
   SPRING: {
     name: "Spring Boot",
-    class: "bg-[#009900] text-white font-bold",
+    class: "bg-[#2d2d2d] text-white font-bold",
     icon: Spring,
   },
   JAVA: {
@@ -77,8 +73,18 @@ const TAGS = {
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-[#F0DB4F] text-black font-bold",
+    class: "bg-[#2d2d2d] text-white font-bold",
     icon: JavaScript,
+  },
+  TYPESCRIPT: {
+  name: "TypeScript",
+  class: "bg-[#1E3A8A] text-white font-bold", 
+  icon: TypeScript,
+  },
+  ANGULAR: {
+  name: "Angular",
+  class: "bg-[#2d2d2d] text-white font-bold",
+  icon: Angular,
   },
   BOOTSTRAP: {
     name: "Bootstrap",
@@ -92,7 +98,7 @@ const TAGS = {
   },
   POSTMAN: {
     name: "Postman",
-    class: "bg-[#ff6c37] text-white font-bold",
+    class: "bg-[#2d2d2d] text-white font-bold",
     icon: Postman
   }
 };
@@ -106,12 +112,13 @@ const PROJECTS = [
     tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
   },
   {
-    title: "API RESTful de ventas de musgos - TheKingMoss",
+    title: "Sistema de Ventas de Musgos en Línea - TheKingMoss",
     description:
-      "API REST desarrollada con Spring Boot que permite gestionar un sistema de ventas de musgos. Cuenta con autenticación JWT, control de roles (ADMIN/USER) y endpoints protegidos. Conectada a una base de datos MySQL.",
-    github: "https://github.com/Daniel-JA03/thekingmoss",
+      "Plataforma completa para la gestión y venta de musgos. Incluye un frontend desarrollado con Angular para la experiencia del usuario, y un backend con Spring Boot, MySQL y autenticación JWT para la administración y seguridad de la información.",
+    backend: "https://github.com/Daniel-JA03/thekingmoss.git",
+    frontend: "https://github.com/Daniel-JA03/thekingmoss-frontend-angular.git",
     image: "/projects/thekingmoss.webp", 
-    tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.JWT, TAGS.POSTMAN],
+    tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.JWT, TAGS.POSTMAN, TAGS.TYPESCRIPT, TAGS.ANGULAR],
   },
   {
     title:
@@ -136,7 +143,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, frontend, backend }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           
@@ -182,6 +189,18 @@ const PROJECTS = [
                 <LinkButton href={link} target="_blank">
                   <Web class="size-6" />
                   Ir al sitio
+                </LinkButton>
+              )}
+              {backend && (
+                <LinkButton href={backend} target="_blank">
+                  <GitHub class="size-6" />
+                  Backend
+                </LinkButton>
+              )}
+              {frontend && (
+                <LinkButton href={frontend} target="_blank">
+                  <GitHub class="size-6" />
+                  Frontend
                 </LinkButton>
               )}
             </footer>
