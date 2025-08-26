@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/react": "^4.2.0",
-    "@astrojs/tailwind": "^6.0.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
     "@fontsource-variable/onest": "^5.0.2",
-    "astro": "^5.2.5",
+    "astro": "^5.13.3",
     "portafolio-dev": "file:",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
