@@ -19,6 +19,8 @@ import Jwt from "./icons/Jwt.astro";
 import Postman from "./icons/Postman.astro"
 import TypeScript from "./icons/TypeScript.astro";
 import Angular from "./icons/Angular.astro"
+import PDF from "./icons/pdf.astro"
+import ASPNET from "./icons/dotnet.astro"
 
 const TAGS = {
   TAILWIND: {
@@ -100,17 +102,28 @@ const TAGS = {
     name: "Postman",
     class: "bg-[#2d2d2d] text-white font-bold",
     icon: Postman
+  },
+  PDF: {
+    name: "PDF",
+    class: "bg-[#2d2d2d] text-white font-bold",
+    icon: PDF
+  },
+  ASPNET: {
+    name: "ASP.NET",
+    class: "bg-[#512BD4] text-white font-bold",
+    icon: ASPNET
   }
 };
 const PROJECTS = [
   {
-    title: "Sistema de Venta de Cafe Online - Puma Café",
-    description:
-      "Aplicación web desarrollada para facilitar la compra y venta de café en línea. Incluye funcionalidades como gestión de productos, carrito de compras y administración de pedidos. Implementada con Java y Spring Boot en el backend, conectada a una base de datos MySQL para el manejo eficiente de información, y Bootstrap y JavaScript para un diseño responsivo e interactivo.",
-    github: "https://github.com/Daniel-JA03/PumaCafe",
-    image: "/projects/pumaCafe.webp",
-    tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
+  title: "Sistema de Gestión Clínica - Clínica SANNA",
+  description:
+    "Aplicación web para la gestión integral de una clínica, desarrollada con ASP.NET Core Web API y ASP.NET Core MVC y SQL Server. Permite administrar pacientes, médicos, citas y pagos, con diferentes roles de acceso. Incluye generación de reportes en PDF para mejorar la organización y el control.",
+  github: "https://github.com/Daniel-JA03/ClinicaSANNA_EFSRT_IV.git", 
+  image: "/projects/clinicaSANNA.webp", 
+  tags: [TAGS.CSHARP, TAGS.ASPNET, TAGS.SQLSERVER, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS, TAGS.PDF],
   },
+
   {
     title: "Sistema de Ventas de Musgos en Línea - TheKingMoss",
     description:
@@ -119,6 +132,14 @@ const PROJECTS = [
     frontend: "https://github.com/Daniel-JA03/thekingmoss-frontend-angular.git",
     image: "/projects/thekingmoss.webp", 
     tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.JWT, TAGS.POSTMAN, TAGS.TYPESCRIPT, TAGS.ANGULAR],
+  },
+  {
+    title: "Sistema de Venta de Cafe Online - Puma Café",
+    description:
+      "Aplicación web desarrollada para facilitar la compra y venta de café en línea. Incluye funcionalidades como gestión de productos, carrito de compras y administración de pedidos. Implementada con Java y Spring Boot en el backend, conectada a una base de datos MySQL para el manejo eficiente de información, y Bootstrap y JavaScript para un diseño responsivo e interactivo.",
+    github: "https://github.com/Daniel-JA03/PumaCafe",
+    image: "/projects/pumaCafe.webp",
+    tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
   },
   {
     title:
