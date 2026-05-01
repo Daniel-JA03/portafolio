@@ -13,6 +13,8 @@ import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import Projects from "@/components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
+
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -25,7 +27,7 @@ import SocialPill from "../components/SocialPill.astro";
       <div class="flex gap-4 mb-4">
         <img
           class="rounded-full shadow-lg w-16 h-16"
-          src="/img.webp"
+          src={`${BASE_URL}/img.webp`}
           alt="photo"
         />
       </div>
@@ -56,7 +58,7 @@ import SocialPill from "../components/SocialPill.astro";
           LinkedIn
         </SocialPill>
         <SocialPill
-          href="./CV_Daniel_Jaimes_Backend.pdf"
+          href={`${BASE_URL}/CV_Daniel_Jaimes_Backend.pdf`}
           download="Daniel_Jaimes_CV.pdf"
           aria-label="Download Daniel Jaimes"
         >

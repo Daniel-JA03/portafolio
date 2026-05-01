@@ -1,11 +1,13 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const EXPERIENCE = [
   {
     date: "2023 - 2025",
     title: "Egresado en Computación e Informática",
     company: "Cibertec",
-    image: "/cibertec2.webp",
+    image: "cibertec2.webp",
     description:
       "Egresado en Computación e Informática con formación en desarrollo de software, bases de datos y aplicaciones web. Experiencia en el desarrollo de APIs REST con Java y Spring Boot, así como con C# y ASP.NET Core Web API. Manejo de tecnologías como MySQL, SQL Server, MongoDB y .NET Framework. Enfoque en la resolución de problemas, aplicación de buenas prácticas de programación y desarrollo de soluciones eficientes.",
   },
@@ -17,7 +19,10 @@ export const EXPERIENCE = [
   {
     EXPERIENCE.map((experiencie) => (
       <li class="mb-10 ms-4">
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem
+          {...experiencie}
+          image={`${BASE_URL}/${experiencie.image}`}  
+        />
       </li>
     ))
   }

@@ -22,6 +22,10 @@ import Angular from "./icons/Angular.astro"
 import PDF from "./icons/pdf.astro"
 import ASPNET from "./icons/dotnet.astro"
 
+const BASE_URL = import.meta.env.BASE_URL;
+
+
+
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
@@ -120,7 +124,7 @@ const PROJECTS = [
   description:
     "Aplicación web para la gestión integral de una clínica, desarrollada con ASP.NET Core Web API y ASP.NET Core MVC y SQL Server. Permite administrar pacientes, médicos, citas y pagos, con diferentes roles de acceso. Incluye generación de reportes en PDF para mejorar la organización y el control.",
   github: "https://github.com/Daniel-JA03/ClinicaSANNA_EFSRT_IV.git", 
-  image: "/projects/clinicaSANNA.webp", 
+  image: `${BASE_URL}/projects/clinicaSANNA.webp`, 
   tags: [TAGS.CSHARP, TAGS.ASPNET, TAGS.SQLSERVER, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS, TAGS.PDF],
   },
 
@@ -130,7 +134,7 @@ const PROJECTS = [
       "Plataforma completa para la gestión y venta de musgos. Incluye un frontend desarrollado con Angular para la experiencia del usuario, y un backend con Spring Boot, MySQL y autenticación JWT para la administración y seguridad de la información.",
     backend: "https://github.com/Daniel-JA03/thekingmoss.git",
     frontend: "https://github.com/Daniel-JA03/thekingmoss-frontend-angular.git",
-    image: "/projects/thekingmoss.webp", 
+    image: `${BASE_URL}/projects/thekingmoss.webp`, 
     tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.JWT, TAGS.POSTMAN, TAGS.TYPESCRIPT, TAGS.ANGULAR],
   },
   {
@@ -138,7 +142,7 @@ const PROJECTS = [
     description:
       "Aplicación web desarrollada para facilitar la compra y venta de café en línea. Incluye funcionalidades como gestión de productos, carrito de compras y administración de pedidos. Implementada con Java y Spring Boot en el backend, conectada a una base de datos MySQL para el manejo eficiente de información, y Bootstrap y JavaScript para un diseño responsivo e interactivo.",
     github: "https://github.com/Daniel-JA03/PumaCafe",
-    image: "/projects/pumaCafe.webp",
+    image: `${BASE_URL}/projects/pumaCafe.webp`,
     tags: [TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
   },
   {
@@ -147,7 +151,7 @@ const PROJECTS = [
     description:
       "Plataforma diseñada para gestionar la compra y venta de boletos de transporte terrestre. Incluye funcionalidades para la reserva de asientos, gestión de rutas y horarios, y administración de usuarios. Desarrollada con Java y Bootstrap, con MySQL como base de datos para almacenar información de manera estructurada.",
     github: "https://github.com/Daniel-JA03/expressPeru",
-    image: "/projects/expressperu.webp",
+    image: `${BASE_URL}/projects/expressperu.webp`,
     tags: [TAGS.JAVA, TAGS.BOOTSTRAP, TAGS.MYSQL],
   },
   {
@@ -156,7 +160,7 @@ const PROJECTS = [
       "Página web enfocada en la promoción y venta de vehículos eléctricos. Desarrollada con HTML, CSS y JavaScript, cuenta con un diseño atractivo y responsivo que resalta las características de los productos y ofrece una experiencia de usuario intuitiva.",
     link: "https://zantra.netlify.app/",
     github: "https://github.com/Daniel-JA03/Zantra-2.0",
-    image: "/projects/zantra.webp",
+    image: `${BASE_URL}/projects/zantra.webp`,
     tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
   },
 ];
