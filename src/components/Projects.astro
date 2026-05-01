@@ -131,6 +131,7 @@ const PROJECTS = [
     title: "Sistema de Ventas de Musgos en Línea - TheKingMoss",
     description:
       "Plataforma completa para la gestión y venta de musgos. Incluye un frontend desarrollado con Angular para la experiencia del usuario, y un backend con Spring Boot, MySQL y autenticación JWT para la administración y seguridad de la información.",
+    link: "https://thekingmoss.vercel.app/",
     backend: "https://github.com/Daniel-JA03/thekingmoss.git",
     frontend: "https://github.com/Daniel-JA03/thekingmoss-frontend-angular.git",
     image: "/projects/thekingmoss.webp", 
@@ -202,24 +203,27 @@ const PROJECTS = [
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github} target="_blank">
-                  <GitHub class="size-6"/>
-                  Código
-                </LinkButton>
-              )}
               {link && (
                 <LinkButton href={link} target="_blank">
                   <Web class="size-6" />
                   Ir al sitio
                 </LinkButton>
               )}
+              
+              {github && (
+                <LinkButton href={github} target="_blank">
+                  <GitHub class="size-6"/>
+                  Código
+                </LinkButton>
+              )}
+
               {backend && (
                 <LinkButton href={backend} target="_blank">
                   <GitHub class="size-6" />
                   Backend
                 </LinkButton>
               )}
+
               {frontend && (
                 <LinkButton href={frontend} target="_blank">
                   <GitHub class="size-6" />
