@@ -14,7 +14,6 @@ import Projects from "@/components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
 
-const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -27,7 +26,7 @@ const BASE_URL = import.meta.env.BASE_URL;
       <div class="flex gap-4 mb-4">
         <img
           class="rounded-full shadow-lg w-16 h-16"
-          src={`${BASE_URL}/img.webp`}
+          src="/img.webp"
           alt="photo"
         />
       </div>
@@ -58,7 +57,7 @@ const BASE_URL = import.meta.env.BASE_URL;
           LinkedIn
         </SocialPill>
         <SocialPill
-          href={`${BASE_URL}/CV_Daniel_Jaimes_Backend.pdf`}
+          href="/CV_Daniel_Jaimes_Backend.pdf"
           download="Daniel_Jaimes_CV.pdf"
           aria-label="Download Daniel Jaimes"
         >
